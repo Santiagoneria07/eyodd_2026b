@@ -3,16 +3,34 @@ Escribir un programa que calculé la suma de "n" números naturales.
 Por ejemplo si n=100, el programa calculará la suma del 1 al 100 
 """
 #importamos biblioteca time 
+
 import time 
 
-#creando una marca de tiempo 
+
+
+#Tomando el tiempo inicial 
 timestamp_01 = time.time()
 
 #programa que calcula las suma 
 #de los "n" números naturales 
 n =100 
-sum = 0
+total_sum = 0
 
-#ciclo for 
 for number in range(1,n+1):
-    print (str(number)+ " ")
+    
+    total_sum = total_sum + number
+    #1:sum <- 0 + 1
+    #sum = 1
+    #2: sum <- 1 + 2
+    #sum=3
+    #3: sum <- 3 + 3
+    #...
+    #100:sum <- antsum + 100
+
+print(f"La suma de 1 hasta {n} es: {total_sum}")
+
+#Tomando el tiempo final 
+timestamp_02 = time.time()
+
+#impresion del tiempo de ejecución
+print(f"Tiempo de ejecucuion: {(timestamp_02-timestamp_01) * 1e6:.2f} μs")
