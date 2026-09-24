@@ -1,36 +1,40 @@
 """
-Escribir un programa que calculé la suma de "n" números naturales.
-Por ejemplo si n=100, el programa calculará la suma del 1 al 100 
+Escribir un programa que calcule 
+la suma de los "n" numeros naturales.
+Por ejemplo si n = 100, el programa 
+calculará la suma del 1 al 100.
 """
-#importamos biblioteca time 
 
-import time 
+# Importamos biblioteca time
+import time
 
+# Funcion que suma los primeros n numeros naturales
+def sum_of_n(n):
 
+    total_sum = 0
+    for number in range(1, n + 1):
+        total_sum = total_sum + number
+    return total_sum
 
-#Tomando el tiempo inicial 
-timestamp_01 = time.time()
+# Variable para guardar el data set
+dataset = []  # [(n, time, sum), (n, time, sum)]
 
-#programa que calcula las suma 
-#de los "n" números naturales 
-n =100 
-total_sum = 0
+# Repetimos el calculo con valores de 500 en 500
+for repetition in range(1, 11):
+    # Tomamos el tiempo inicial
+    timestamp_01 = time.time()
 
-for number in range(1,n+1):
-    
-    total_sum = total_sum + number
-    #1:sum <- 0 + 1
-    #sum = 1
-    #2: sum <- 1 + 2
-    #sum=3
-    #3: sum <- 3 + 3
-    #...
-    #100:sum <- antsum + 100
+    # Sumamos los n numeros
+    n = repetition * 500
+    result = sum_of_n(n)
 
-print(f"La suma de 1 hasta {n} es: {total_sum}")
+    # Tomamos el tiempo final
+    timestamp_02 = time.time()
+    elapsed_time = round((timestamp_02 - timestamp_01) * 1e6, 2)
 
-#Tomando el tiempo final 
-timestamp_02 = time.time()
+    # Agregamos la tripleta de los datos al dataset
+    dataset.append((n, elapsed_time, result))
 
-#impresion del tiempo de ejecución
-print(f"Tiempo de ejecucuion: {(timestamp_02-timestamp_01) * 1e6:.2f} μs")
+# Imprimimos el dataset
+for tup in dataset:
+    print(tup)
