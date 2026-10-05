@@ -26,6 +26,7 @@ for repetition in range(1, 11):
 
     # Sumamos los n numeros
     n = repetition * 500
+    
     result = sum_of_n(n)
 
     # Tomamos el tiempo final
