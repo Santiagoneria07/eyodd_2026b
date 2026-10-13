@@ -41,3 +41,8 @@ try:
 except:
     print("⚠️ Numero no encontrado!!!") 
 
+# Asignado valor en un indice que no exite 
+try:
+  my_array[100]=3
+except:
+   print("⚠️ Indice no exite !!!")
