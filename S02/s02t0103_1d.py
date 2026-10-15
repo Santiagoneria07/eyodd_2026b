@@ -9,12 +9,12 @@ from s02t0102_1d import print_array
 #archivo
 my_array = arr('i',[2,10,15,20])
 
-print ("--- ANTES DE LA INSERCION ---")
+print ("--- ANTES DE LA INSERCION --")
 print_array(my_array)
 
 # insercion
 my_array.insert(1,90)
-print ("--- DESPUES DE LA INSERCION ---")
+print ("--- DESPUES DE LA INSERCION --")
 print_array(my_array)
 
 print ("--- DESPUES DE LA APPEND ---")
