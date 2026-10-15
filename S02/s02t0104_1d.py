@@ -18,6 +18,7 @@ try:
     my_array.remove(10)
 except:
     print(f"no se encuentra e el arreglo")
+while 
 print ("--- DESPUES DE LA ELIMINACION  ---")
 print_array(my_array)
 
